@@ -12,12 +12,12 @@ import { GradesModule } from './grades/grades.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DATABASE_HOST || 'localhost',
-      port: parseInt(process.env.DATABASE_PORT || '5432', 10),
-      username: process.env.DATABASE_USER || 'postgres',
-      password: process.env.DATABASE_PASSWORD || 'postgres',
-      database: process.env.DATABASE_NAME || 'academic_db',
-      autoLoadEntities: true,
+      host: 'localhost',
+      port: 5432,
+      username: 'root',
+      password: 'root',
+      database: 'test',
+      entities: [],
       synchronize: true,
     }),
 
